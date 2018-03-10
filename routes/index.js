@@ -26,15 +26,6 @@ router.get('/cms', (req, res) => {
 });
 
 
-//Video Added
-router.get('/video', function(req, res, next) {
-  console.log('hit video route');
-  res.render('video', {
-    title: 'Video App',
-    video: true,
-    cms: false,
-    mainPage : false
-  });
-});
+
 
 module.exports = router;

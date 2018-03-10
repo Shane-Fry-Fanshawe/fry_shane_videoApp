@@ -10,8 +10,8 @@ router.get('/', (req, res) => {
     } else {
       console.log(result);
 
-      res.render('cars', {
-        title: 'Mini Cars',
+      res.render('video', {
+        title: 'video app',
         message : "Video App",
         videoData : result
       });

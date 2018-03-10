@@ -1,81 +1,17 @@
-<header>
+<a href="/">
+  <i class="fa-fa-home"></i>
+</a>
 
-<img class="logo" src="images/logo.png">
-
-<ul>
-  <li><a href="#">Home</a></li>
-  <li><a href="#">TV Shows</a></li>
-  <li><a href="#">Movies</a></li>
-  <li><a href="#">My List</a></li>
-</ul>
-
-<div id="profile">
-  <img class="profile_icon" src="images/search.png">
-  <img class="profile_icon" src="images/notif.png">
-  <img class="profile_icon" src="images/profile.png">
-
-</div>
-
-</header>
+<h1>{{ message }}</h1>
 
 
+  {{#each videoData}}
 
-<section id="videos">
-
-  <div class="video_container_section" >
-    <h1 class="vid_title">YOUR LIST</h1>
-
-
-<div class="video_displayed">
-      <div class="solo_video">
-        <img class="thumbnail" src="images/st_thumbnail.png">
-      </div>
-
-      <div class="overlay">
-        <img class="play-button" src="images/play.png">
-      <div class="video_info">
-        <h1>Stranger Things</h1>
-        <h2>1998</h2>
-        <p>Description</p>
-      </div>
-      </div>
-</div>
+      <h1>{{ videos_id }} </h1>
+      <h1>{{ videos_title }} </h1>
+      <h1>{{ videos_year }} </h1>
 
 
-<div class="solo_video">
-  <img class="thumbnail" src="images/bm_thumbnail.jpg">
-</div>
+  {{/each}}
 
-
-  </div>
-
-
-
-
-
-
-  <div class="video_container_section">
-    <h1 class="vid_title">Comedy</h1>
-
-    <img class="thumbnail" src="images/st_thumbnail.png">
-    <img class="thumbnail" src="images/bm_thumbnail.jpg">
-
-  </div>
-
-
-  <div class="video_container_section">
-    <h1 class="vid_title">Action</h1>
-
-    <img class="thumbnail" src="images/st_thumbnail.png">
-    <img class="thumbnail" src="images/bm_thumbnail.jpg">
-
-  </div>
-
-  <div class="video_container_section">
-    <h1 class="vid_title">New Release</h1>
-
-    <img class="thumbnail" src="images/st_thumbnail.png">
-    <img class="thumbnail" src="images/bm_thumbnail.jpg">
-
-  </div>
-</section>
+  <h1> it works</h1>

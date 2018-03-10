@@ -26,6 +26,8 @@ app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
 app.use('/getCars', require('./routes/getCars'));
 app.use('/api', require('./routes/api'));
+app.use('/video', require('./routes/getVideos'));
+
 
 
 // catch 404 and forward to error handler
