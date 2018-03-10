@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
 
       res.render('video', {
         title: 'video app',
+        video: true,
         message : "Video App",
         videoData : result
       });
