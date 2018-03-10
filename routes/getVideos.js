@@ -1,8 +1,9 @@
+// Connection to database and express router 
 var express = require('express');
 var connect = require('../utils/sqlConnect');
 var router = express.Router();
 
-/* GET home page. */
+/* Video Data Rendered */
 router.get('/', (req, res) => {
   connect.query('SELECT * FROM videos', (err, result) => {
     if (err) {
