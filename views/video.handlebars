@@ -25,13 +25,16 @@
 
 <!-- Loop to get all videos in that category -->
   {{#each videoData}}
+  <h1 class="title">{{ videos_id }} - </h1>
       <div class="single_vid">
+
 
           <img class="thumbnail" src="images/{{ videos_thumbnail }}">
 
 
+
           <div class="overlay">
-            <img class="play-button" src="images/play.png">
+            <img id="{{ videos_id }}" class="play-button" src="images/play.png">
               <div class="video_info">
                 <h1 class="title">{{ videos_title }} - </h1>
                 <h2 class="year">{{ videos_year }}</h2>
@@ -42,6 +45,8 @@
 
 {{/each}}
 </section> <!-- end of Your List -->
+
+
 
 
 
