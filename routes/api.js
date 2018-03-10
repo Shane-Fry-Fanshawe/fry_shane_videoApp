@@ -23,7 +23,10 @@ router.use((req, res, next) => {
   next(); // run the next method (get, put, post, etc)
 });
 
-/* GET home page. */
+
+
+/* GET home page.
+
 router.get('/:id', (req, res) => {
   console.log(req.params.id);
   console.log('hit an api route with params');
@@ -39,11 +42,10 @@ router.get('/:id', (req, res) => {
 
       console.log(carData);
 
-
-
     }
   });
 });
+*/
 
 router.delete('/:id', (req, res) => {
   console.log('hit the delete route');

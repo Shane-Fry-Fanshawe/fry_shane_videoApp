@@ -32,22 +32,12 @@ npm install --save mysql
 - Atom: https://atom.io/
 - MAMP: https://www.mamp.info/en/
 
--Socket.io
-```
-npm install socket.io --save
-```
-
-
--Express
-```
-npm install express
-```
 
 ## Deployment
 - Can use either Mamp/Wamp, or local host through using a port and express to direct to new view page
 - In my case run localhost:3000 and your project will be live
 ```
-node app
+npm start or node app
 ```
 
 ## Running the tests
