@@ -1,4 +1,7 @@
 body {
-  background-color : yellow;
-  color: white;
+  color : yellow;
+}
+
+#your_list{
+	padding-top: 200px;
 }
