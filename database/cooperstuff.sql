@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 10, 2018 at 07:01 AM
+-- Generation Time: Mar 12, 2018 at 05:05 AM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `mainmodel` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `model` (`model`),
   UNIQUE KEY `modelDesc` (`modelName`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `mainmodel`
@@ -86,16 +86,20 @@ CREATE TABLE IF NOT EXISTS `videos` (
   `videos_year` varchar(4) NOT NULL,
   `videos_desc` text NOT NULL,
   `videos_thumbnail` varchar(100) NOT NULL,
+  `videos_category` varchar(110) NOT NULL,
+  `videos_source` varchar(110) NOT NULL,
+  `videos_background` varchar(100) NOT NULL,
   PRIMARY KEY (`videos_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `videos`
 --
 
-INSERT INTO `videos` (`videos_id`, `videos_title`, `videos_year`, `videos_desc`, `videos_thumbnail`) VALUES
-(1, 'Stranger Things', '2016', 'test desc', 'st_thumbnail.png'),
-(2, 'Black Mirror', '2011', '\"Black Mirror\" is a contemporary reworking of \"The Twilight Zone\" with stories that tap into the collective unease about the modern world.', 'bm_thumbnail.jpg');
+INSERT INTO `videos` (`videos_id`, `videos_title`, `videos_year`, `videos_desc`, `videos_thumbnail`, `videos_category`, `videos_source`, `videos_background`) VALUES
+(1, 'Stranger Things', '2016', 'This thrilling Netflix original drama stars Golden Globe-winning actress Winona Ryder as Joyce Byers, who lives in a small Indiana town in 1983', 'st_thumbnail.png', 'thriller', 'stranger_things.mp4', 'st_background.jpg'),
+(2, 'Black Mirror', '2011', '\"Black Mirror\" is a contemporary reworking of \"The Twilight Zone\" with stories that tap into the collective unease about the modern world.', 'bm_thumbnail.jpg', 'thriller', 'black_mirror.mp4', 'black_mirror.jpg'),
+(3, 'baywatch', '2017', 'When a dangerous crime wave hits the beach, the legendary Mitch Buchannon leads his elite squad of lifeguards on a mission to prove that you don\'t have to wear a badge to save the bay.', 'baywatch_thumbnail.jpg', 'comedy', 'baywatch.mp4', 'baywatch_background.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

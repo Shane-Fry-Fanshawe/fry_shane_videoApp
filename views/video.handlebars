@@ -10,6 +10,11 @@
   </ul>
 
   <div id="profile">
+
+    <p>Place Holder for Kids Mode:</p>
+    <img class="profile_icon kid" src="images/kids.png">
+    <img class="profile_icon adult" src="images/adult.png">
+
     <img class="profile_icon" src="images/search.png">
     <img class="profile_icon" src="images/notif.png">
     <img class="profile_icon" src="images/profile.png">
@@ -18,14 +23,31 @@
 
 </header>
 
+
+<div id="video_lightbox">
+
+
+<p class="desc">will only play audio? not sure why</p>
+  <video width="90%" height="auto" controls>
+    <source src="videos/test.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+  <img class="close-lightbox" src="images/close.png">
+
+
+</div>
+
+
+
 <section id="allVideos">
 
 <section id="your_list">
-<h1 class="section_title">YOUR LIST:</h1>
+
+<h1 class="section_title">YOUR LIST:( These are loaded from DB )</h1>
+<p> Notes: Kids mode wont work when I set it true, unless I kill the server and manually? The Site works as intended just need to update to fill info for videos from DB not hardcoded. Also for other sections I have the queries working, but have troubles rendering them to the same page <br><br> </p>
 
 <!-- Loop to get all videos in that category -->
   {{#each videoData}}
-  <h1 class="title">{{ videos_id }} - </h1>
       <div class="single_vid">
 
 
@@ -44,11 +66,29 @@
       </div>
 
 {{/each}}
+
+
+<!-- Need to update this to match info like above, from the database
+      I had troubles so I was hardcoding it as of now so it showed that i know how to do it, just issues pulling info from a databse.
+      Because when I click the button in the loop I want to pull the ID and supply the info according to the ID but had issues will try to fix later
+      Also for categories, I was having troubles rendering multiple queries to one page not sure why. I would just run the above code but to match the info pulled from the DB
+
+      *In a way it has everything required, but not fully functioning properly as a real site. I have it rendering to the page from a mysql module, and the video plays when you click the button, and shows its corresponding info. I was trying to prefect it such as netflix where I ran into problems
+      Will try to fix as I go as I enjoyed this project building a netflix in a way*
+
+-->
+
+<div class="display" style="">
+  <img class="close" src="images/close.png">
+  <h1 class="display_title">STRANGER THINGS</h1>
+  <h1 class="display_year">2017</h1>
+  <p class="display_desc">When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.</p>
+  <button class="button">WATCH NOW</button>
+  <img class="like-button thumb" src="images/like.png">
+  <img class="dislike-button thumb" src="images/dislike.png">
+  <img class="big-play" src="images/play.svg">
+</div>
 </section> <!-- end of Your List -->
-
-
-
-
 
 
 

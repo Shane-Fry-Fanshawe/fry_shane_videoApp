@@ -1,27 +1,83 @@
-console.log('linked to videos');
-
-
 var playButton = document.querySelector('.play-button');
+var displayBox = document.querySelector(".display");
+var closeButton= document.querySelector(".close");
+var closeLightBoxButton = document.querySelector(".close-lightbox");
+var displayLightbox = document.querySelector("#video_lightbox");
+var bigPlayButton = document.querySelector(".big-play");
+var kidsButton = document.querySelector(".kid");
+
+var kidsmode = false;
+var kidsmode = true;
+
 
 function playVideo(event){
   console.log(event.target.id);
 }
 
+function showVideoDisplay(){
 
-playButton.addEventListener('click', playVideo);
+  if (displayBox.style.display == "block"){
+      displayBox.style.display = "none"
+ }
+ else {
+      displayBox.style.display = "block";
+    }
+  }
+
+  function showLightbox(){
+
+    if (displayLightbox.style.display == "block"){
+        displayLightbox.style.display = "none"
+   }
+   else {
+      displayLightbox.style.display = "block";
+      }
+    }
+
+
+
+  function hideVideoDisplay(){
+    displayBox.style.display = "none";
+    }
+
+    function hideLightbox(){
+      displayLightbox.style.display = "none";
+      }
 
 
 
 
 
-// FOR MARKS
+//Kid Stuff:
+function kidsActive(){
+  kidsmode = true;
+  video = false;
+  console.log(kidsmode);
+  location.reload();
+
+  }
+
+
+
+  kidsButton.addEventListener('click', kidsActive, false);
+  bigPlayButton.addEventListener('click', showLightbox, false);
+  closeLightBoxButton.addEventListener('click', hideLightbox, false);
+  closeButton.addEventListener('click', hideVideoDisplay, false);
+  playButton.addEventListener('click', showVideoDisplay, false);
+
+
+
+
+
+
+
+
+
+
+
+/* FOR MARKS
 //I was trying to change the videos url based on what play button was clicked and use its ID to fill in the correct video source
 //I think I need to loop through all the play buttons but i couldnt get it to work
-
-
-
-
-
 
 
 //Heres some video functions that would be paused
@@ -134,3 +190,5 @@ function setvolume(){
   fullscreenButton.addEventListener("click", fullscreenFunction, false);
   volumeslider.addEventListener("click", setvolume, false);
   volumeButton.addEventListener("click", muteFunction, false);
+
+  */

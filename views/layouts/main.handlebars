@@ -8,6 +8,10 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
 
+  {{#if kidsmode}}
+    <link rel="stylesheet" href="/stylesheets/kids.css">
+  {{/if}}
+
   {{#if cms}}
     <link rel="stylesheet" href="stylesheets/form.css">
   {{/if}}
@@ -15,6 +19,7 @@
   {{#if video}}
     <link rel="stylesheet" href="stylesheets/video.css">
   {{/if}}
+
 
 
   <title>{{ title }}</title>

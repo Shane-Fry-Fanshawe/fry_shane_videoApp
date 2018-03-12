@@ -205,6 +205,7 @@ div.single_vid {
     position: relative;
 		height: 175px;
 	  width: 320px;
+		margin-bottom: 30px;
 }
 
 div.overlay {
@@ -235,4 +236,142 @@ div.overlay:hover {
 #thrillers{
 	clear: both;
 	padding-top: 30px;
+}
+
+
+
+.display
+{
+	background: url(../images/st_background.jpg) no-repeat center center;
+	background-size: 100%;         /* Generic*/
+	clear: both;
+	width: 100%;
+	height: 500px;
+	margin-left: -20px;
+	padding-top: 15px;
+	display: none;
+}
+
+.button {
+    background-color: #111111;
+		border: 1px solid #111111;
+    color: #f1f1f1;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 40px 0px 4px 50px;
+    cursor: pointer;
+		float: left;
+}
+
+.button:hover {
+		color: grey;
+		border-radius: 6px;
+}
+
+.thumb {
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+	margin-top: 48px;
+	margin-left: 10px;
+}
+
+.big-play
+{
+	margin-top: -60px;
+	position: absolute;
+	margin-left: 800px;
+	height: 200px;
+	width: 200px;
+	animation: pulse 5s infinite;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.close
+{
+	float: right;
+	margin-right: 30px;
+	margin-top: 30px;
+	cursor: pointer;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(10,11,16, 0.3);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 30px rgba(10,11,16, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(10,11,16, 0);
+  }
+}
+
+.display_title
+{
+	margin-top: 70px;
+	margin-left: 50px;
+	text-shadow: 2px 2px 2px #000000;
+	font-weight: bold;
+	font-size: 2.5em;
+}
+
+.display_year
+{
+	margin-left: 50px;
+	text-shadow: 2px 2px 2px #000000;
+	font-weight: bold;
+	font-size: 1.8em;
+}
+
+.display_desc
+{
+	margin-top: 20px;
+	margin-left: 50px;
+	font-size: 1em;
+	width: 30%;
+}
+
+
+#video_lightbox
+{
+	display: none;
+	/** Position and style */
+position: fixed;
+z-index: 999;
+width: 100%;
+height: 100%;
+text-align: center;
+top: 0;
+left: 0;
+background: rgba(0,0,0,0.95);
+}
+
+video{
+	background-color: white;
+	margin-top: 40px;
+}
+
+.close-lightbox
+{
+	position: absolute;
+	margin-left: 40px;
+	margin-top: 40px;
+	float: right;
+	cursor: pointer;
+}
+
+
+#profile p{
+	float: left;
+}
+
+
+.adult
+{
+	margin-right: 100px;
 }
